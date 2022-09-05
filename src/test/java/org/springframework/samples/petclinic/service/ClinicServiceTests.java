@@ -17,7 +17,6 @@
 package org.springframework.samples.petclinic.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.fail;
 
 import java.time.LocalDate;
 import java.util.Collection;
@@ -93,7 +92,6 @@ class ClinicServiceTests {
 
 	@Test
 	void shouldFindSingleOwnerWithPet() {
-		fail("Break a test");
 		Owner owner = this.owners.findById(1);
 		assertThat(owner.getLastName()).startsWith("Franklin");
 		assertThat(owner.getPets()).hasSize(1);
